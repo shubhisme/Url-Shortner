@@ -11,6 +11,8 @@ export default function Home() {
     e.preventDefault();
 
     const result = await axios.post("/api/shorten", { longUrl });
+
+    await refreshLinks();
   };
 
   const getLinks = async () => {
