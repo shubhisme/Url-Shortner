@@ -1,4 +1,3 @@
-
 import { redirect } from "next/navigation";
 import { redis } from "../../../../lib/redis";
 
@@ -16,5 +15,5 @@ export default async function RedirectPage({ params }) {
     longUrl.startsWith("http://") || longUrl.startsWith("https://");
   const fullUrl = isValid ? longUrl : `http://${longUrl}`;
 
-  redirect(fullUrl); // 🚀 redirect to original URL
+  redirect(fullUrl);
 }
